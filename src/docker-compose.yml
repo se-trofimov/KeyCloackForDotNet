@@ -1,0 +1,21 @@
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    container_name: webapi
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+
+  keycloak.database: 
+    image: postgres:16.0
+    container_name: keycloak.database
+  
+  keycloak:
+     image: ${DOCKER_REGISTRY-}keycloak
+     container_name: keycloak
+     restart: always
+     build:
+       context: .
+       dockerfile: Keycloak/Dockerfile
+     depends_on:
+       - keycloak.database
