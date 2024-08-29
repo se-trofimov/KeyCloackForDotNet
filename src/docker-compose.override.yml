@@ -5,6 +5,10 @@ services:
       - ASPNETCORE_HTTP_PORTS=8080
     ports:
       - "8080"
+   
+  blazor.client:
+     ports:
+      - "8055:80"
 
   keycloak.database:
     environment:
@@ -29,11 +33,12 @@ services:
       KC_DB: $KC_VENDOR
       KC_DB_USERNAME: $KC_DB_USERNAME
       KC_DB_PASSWORD: $KC_DB_PASSWORD
-      KC_HOSTNAME: keycloak
+      KC_HOSTNAME: localhost
       KC_DB_URL_HOST: keycloak.database
       KC_DB_URL_PORT: 5432
       KC_DB_URL_DATABASE: $KC_DB
-
+      KC_HEALTH_ENABLED: true
+      KC_METRICS_ENABLED: true
     ports:
       - "8443:8443"
       - "9000:9000"

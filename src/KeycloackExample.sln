@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Keycloak", "Keycloak", "{60
 		Keycloak\Dockerfile = Keycloak\Dockerfile
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorClient", "BlazorClient\BlazorClient.csproj", "{BC231E5A-75E1-4BF3-B751-889A198922F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{3D590699-2456-4ECD-ADE4-B0E549873500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D590699-2456-4ECD-ADE4-B0E549873500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D590699-2456-4ECD-ADE4-B0E549873500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

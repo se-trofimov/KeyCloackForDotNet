@@ -6,6 +6,13 @@ services:
       context: .
       dockerfile: WebAPI/Dockerfile
 
+  blazor.client:
+    image: ${DOCKER_REGISTRY-}blazor.client
+    container_name: blazor.client
+    build:
+      context: .
+      dockerfile: BlazorClient/Dockerfile
+
   keycloak.database: 
     image: postgres:16.0
     container_name: keycloak.database
