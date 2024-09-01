@@ -12,7 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Keycloak", "Keycloak", "{60
 		Keycloak\Dockerfile = Keycloak\Dockerfile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorClient", "BlazorClient\BlazorClient.csproj", "{BC231E5A-75E1-4BF3-B751-889A198922F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorClient", "BlazorClient\BlazorClient.csproj", "{BC231E5A-75E1-4BF3-B751-889A198922F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nginx", "Nginx", "{ADAC6DB4-A315-4F27-B33E-F66ACB5251E5}"
+	ProjectSection(SolutionItems) = preProject
+		Nginx\nginx.conf = Nginx\nginx.conf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
