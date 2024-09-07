@@ -4,6 +4,7 @@ using Microsoft.OpenApi.Models;
 using Keycloak.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Logging;
+using Keycloak.Authorization;
 
 namespace WebAPI
 {
@@ -17,9 +18,8 @@ namespace WebAPI
             var builder = WebApplication.CreateBuilder(args);
  
             builder.Services.AddControllers();
-
             builder.Services.AddKeycloakConfiguration();
-
+            
             var keycloakOptions = builder.Services.BuildServiceProvider()
                 .GetRequiredService<IOptions<KeycloakConfig>>();
          
@@ -78,7 +78,7 @@ namespace WebAPI
 
                     var validationParameters = new TokenValidationParameters
                     {
-                        ClockSkew = TimeSpan.FromMinutes(5),
+                        ClockSkew = TimeSpan.FromMinutes(1),
                         ValidateAudience =  true,
                         ValidateIssuer = true,
                         NameClaimType = "preferred_username",
@@ -92,6 +92,13 @@ namespace WebAPI
                     opts.SaveToken = true;
                 });
 
+
+            builder.Services.AddAuthorization(options =>
+                {
+                    options.AddPolicy("weather-reader-policy", 
+                        policy => policy.AddRequirements(new DecisionRequirement(WeatherForecastAuthConstants.WeatherForecastResource, ScopeConstants.Read)));
+                })
+                .AddKeycloakAuthorization();
 
 
             var app = builder.Build();

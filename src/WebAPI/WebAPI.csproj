@@ -16,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Keycloak.Authorization\Keycloak.Authorization.csproj" />
     <ProjectReference Include="..\Keycloak.Configuration\Keycloak.Configuration.csproj" />
+    <ProjectReference Include="..\Keycloak.HttpClient\Keycloak.HttpClient.csproj" />
   </ItemGroup>
 
 </Project>

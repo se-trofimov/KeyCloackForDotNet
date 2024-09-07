@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keycloak.Configuration", "K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keycloak.HttpClient", "Keycloak.HttpClient\Keycloak.HttpClient.csproj", "{823DADB4-5B8E-4AAA-A005-23DA468D43FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keycloak.Authorization", "Keycloak.Authorization\Keycloak.Authorization.csproj", "{ECECD616-FE3B-4D48-BAEC-4D1162B9EC87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECECD616-FE3B-4D48-BAEC-4D1162B9EC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECECD616-FE3B-4D48-BAEC-4D1162B9EC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECECD616-FE3B-4D48-BAEC-4D1162B9EC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECECD616-FE3B-4D48-BAEC-4D1162B9EC87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
