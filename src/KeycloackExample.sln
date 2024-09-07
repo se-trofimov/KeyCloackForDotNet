@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nginx", "Nginx", "{ADAC6DB4
 		Nginx\nginx.conf = Nginx\nginx.conf
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keycloak.Configuration", "Keycloak.Configuration\Keycloak.Configuration.csproj", "{3ED8649A-EED1-46CB-A834-12BA32B0E616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keycloak.HttpClient", "Keycloak.HttpClient\Keycloak.HttpClient.csproj", "{823DADB4-5B8E-4AAA-A005-23DA468D43FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC231E5A-75E1-4BF3-B751-889A198922F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED8649A-EED1-46CB-A834-12BA32B0E616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED8649A-EED1-46CB-A834-12BA32B0E616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED8649A-EED1-46CB-A834-12BA32B0E616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED8649A-EED1-46CB-A834-12BA32B0E616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823DADB4-5B8E-4AAA-A005-23DA468D43FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,7 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Net.Security;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
+using Keycloak.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Logging;
 
@@ -13,28 +9,17 @@ namespace WebAPI
 {
     public class Program
     {
-        static bool ValidateCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
-        {
-            return true;
-        }
-
         public static void Main(string[] args)
         {
             IdentityModelEventSource.LogCompleteSecurityArtifact = true;
             IdentityModelEventSource.ShowPII = true;
-
-
-
+ 
             var builder = WebApplication.CreateBuilder(args);
  
             builder.Services.AddControllers();
 
-            builder.Services.AddOptions<KeycloakConfig>()
-                .BindConfiguration("Keycloak")
-                .ValidateDataAnnotations()
-                .ValidateOnStart();
+            builder.Services.AddKeycloakConfiguration();
 
-  
             var keycloakOptions = builder.Services.BuildServiceProvider()
                 .GetRequiredService<IOptions<KeycloakConfig>>();
          
